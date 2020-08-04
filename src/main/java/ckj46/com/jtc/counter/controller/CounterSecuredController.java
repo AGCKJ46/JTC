@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Slf4j
-@RequestMapping(path = "/api/counters")
+@RequestMapping(path = "/api/secured/counters")
 @RestController
 @RequiredArgsConstructor
 @CrossOrigin
-public class CounterController {
+public class CounterSecuredController {
     @GetMapping(path = "/{id}")
     public Counter getCounterById(HttpServletResponse response, @PathVariable Long id) throws IOException {
         log.info("getCounterById {}", id);
