@@ -12,7 +12,7 @@ public class JtcSecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/api/secured/**")
-                .authenticated()
+                .hasRole("ADMIN")
                 .and()
                 .formLogin()
                 .and()
