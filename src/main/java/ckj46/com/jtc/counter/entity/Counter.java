@@ -15,6 +15,8 @@ import java.time.LocalDateTime;
 @Slf4j
 @NoArgsConstructor
 public class Counter extends BaseEntity {
-    LocalDateTime localDateTime = LocalDateTime.now();
-    String name = "Time Counter 1";
+    static int counterCounter = 0;
+
+    LocalDateTime localDateTime = LocalDateTime.now().plusDays(counterCounter);
+    String name = "Time Counter " + (++counterCounter);
 }
